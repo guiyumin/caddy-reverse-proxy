@@ -3,15 +3,6 @@
     https_port 443
 }
 
-blog.pandapress.org {
-    @http protocol http
-    handle @http {
-        reverse_proxy localhost:8080
-    }
+import ./downstreams/*.Caddyfile
 
-    @https protocol https
-    handle @https {
-        reverse_proxy localhost:8443 
-    }
-}
 

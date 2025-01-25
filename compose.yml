@@ -10,3 +10,6 @@ services:
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
     restart: always
+
+networks:
+  - caddy_reverse_proxy
